@@ -14,14 +14,8 @@ return new class extends Migration
         Schema::create('movement', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->timestamps();
         });
-
-        // Inserir data
-        // DB::table('movement')->insert([
-        //     ['name' => 'Deadlift'],
-        //     ['name' => 'Back Squat'],
-        //     ['name' => 'Bench Press']
-        // ]);
     }
 
     /**

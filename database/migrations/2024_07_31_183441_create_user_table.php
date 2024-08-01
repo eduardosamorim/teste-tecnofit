@@ -14,15 +14,10 @@ return new class extends Migration
         Schema::create('user', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->timestamps();
         });
-        
-        // Insert data
-        // DB::table('user')->insert([
-        //     ['name' => 'Joao'],
-        //     ['name' => 'Jose'],
-        //     ['name' => 'Paulo']
-        // ]);
     }
+    
     /**
      * Reverse the migrations.
      */
