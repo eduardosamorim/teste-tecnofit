@@ -14,11 +14,14 @@ Certifique-se de ter as seguintes ferramentas instaladas:
    Clone o Repositório
 
    - Primeiro, clone o repositório para o seu ambiente local:
-      - "git clone https://github.com/eduardosamorim/teste-tecnofit.git"
+      
+         git clone https://github.com/eduardosamorim/teste-tecnofit.git
 
    - Instale as Dependências
-      - "cd teste-tecnofit" para entrar na pasta do arquivo.
-      - "composer install".
+      
+         cd teste-tecnofit
+
+         composer install
 
    - Configure o Arquivo .env
       -Copie o arquivo .env.example para .env:
@@ -26,28 +29,30 @@ Certifique-se de ter as seguintes ferramentas instaladas:
    
    - Abra o arquivo .env e configure as seguintes variáveis de ambiente de acordo com seu banco de dados:
 
-         - DB_CONNECTION=mysql
-         - DB_HOST=127.0.0.1
-         - DB_PORT=3306
-         - DB_DATABASE=nome_do_banco_de_dados
-         - DB_USERNAME=seu_usuario
-         - DB_PASSWORD=sua_senha
+         DB_CONNECTION=mysql
+         DB_HOST=127.0.0.1
+         DB_PORT=3306
+         DB_DATABASE=nome_do_banco_de_dados
+         DB_USERNAME=seu_usuario
+         DB_PASSWORD=sua_senha
 
    - Gere a chave de aplicação do Laravel:
 
-      - "php artisan key:generate"
+         php artisan key:generate
    
    - Execute as Migrations (caso não tenha criado as tabelas manualmente);
 
       - Crie as tabelas no banco de dados usando as migrations:
-         - "php artisan migrate"
+
+            php artisan migrate
 
    - Popule o Banco de Dados (caso não tenha inserido os dados manualmente);
 
-      - "php artisan db:seed"
+         php artisan db:seed
    
 3. Executando o Servidor:
-   - "php artisan serve"
+
+         php artisan serve
    - O servidor estará disponível em http://localhost:8000.
 
 4. Testando o Endpoint REST:
