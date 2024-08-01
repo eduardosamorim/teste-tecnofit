@@ -9,6 +9,12 @@ class MovementRepository
 {
     public function findById($id)
     {
-        return Movement::findOrFail($id);
+        $movement = Movement::find($id);
+
+        if(!$movement){
+            return null;
+        }
+        
+        return Movement::find($id);
     }
 }

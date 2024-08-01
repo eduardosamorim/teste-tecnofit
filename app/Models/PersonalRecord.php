@@ -24,8 +24,4 @@ class PersonalRecord extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function movement(){
-        return $this->belongsTo(Movement::class);
-    }
-
 }

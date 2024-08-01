@@ -20,14 +20,15 @@ class RankingController extends Controller
         try {
             $result = $this->rankingService->getRanking($movementId);
 
-            if (empty($result['ranking'])) {
-                return response()->json(['message' => 'No data found'], 204);
+            if (!$result) {
+                return response()->json(['error' => 'No data found'], 204);
             }
+
             return response()->json($result);
         } catch (ModelNotFoundException $e) {
             return response()->json(['error' => $e->getMessage()], 404);
         } catch (\Exception $e) {
-            return response()->json(['error' => 'Erro ao buscar os registros pessoais'], 500);
+            return response()->json(['error' => 'Error'], 500);
         }
     }
 }
