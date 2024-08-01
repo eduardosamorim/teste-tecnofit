@@ -13,18 +13,18 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 2. Configuração do Ambiente
    Clone o Repositório
 
-   1. Primeiro, clone o repositório para o seu ambiente local:
+   - Primeiro, clone o repositório para o seu ambiente local:
       - "git clone https://github.com/eduardosamorim/teste-tecnofit.git"
 
-   2. Instale as Dependências
+   - Instale as Dependências
       - "cd teste-tecnofit" para entrar na pasta do arquivo.
       - "composer install".
 
-   3. Configure o Arquivo .env
+   - Configure o Arquivo .env
       -Copie o arquivo .env.example para .env:
       -"copy .env.example .env"
    
-   4. Abra o arquivo .env e configure as seguintes variáveis de ambiente de acordo com seu banco de dados:
+   - Abra o arquivo .env e configure as seguintes variáveis de ambiente de acordo com seu banco de dados:
 
          - DB_CONNECTION=mysql
          - DB_HOST=127.0.0.1
@@ -33,16 +33,16 @@ Certifique-se de ter as seguintes ferramentas instaladas:
          - DB_USERNAME=seu_usuario
          - DB_PASSWORD=sua_senha
 
-   5. Gere a chave de aplicação do Laravel:
+   - Gere a chave de aplicação do Laravel:
 
       - "php artisan key:generate"
    
-   6. Execute as Migrations (caso não tenha criado as tabelas manualmente);
+   - Execute as Migrations (caso não tenha criado as tabelas manualmente);
 
       - Crie as tabelas no banco de dados usando as migrations:
          - "php artisan migrate"
 
-   7. Popule o Banco de Dados (caso não tenha inserido os dados manualmente);
+   - Popule o Banco de Dados (caso não tenha inserido os dados manualmente);
 
       - "php artisan db:seed"
    
